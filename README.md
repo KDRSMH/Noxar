@@ -157,4 +157,4 @@ MIT License
 
 ## Author
 
-Semih Kadir | 2026
+[Semih Kadir](https://www.linkedin.com/in/kadir-semih-yıldırım) | 2026
