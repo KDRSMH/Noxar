@@ -43,12 +43,12 @@ func ScanPorts(host string, startPort, endPort int) <-chan PortScanResult {
 }
 
 func isPortOpen(host string, port int) bool {
-	address := fmt.Sprintf("%s:%d", host, port)
+	address := net.JoinHostPort(host, fmt.Sprintf("%d", port))
 
 	for attempt := 0; attempt < MaxRetries; attempt++ {
 		conn, err := net.DialTimeout("tcp", address, ScanTimeout)
 		if err == nil {
-			defer conn.Close()
+			conn.Close()
 			return true
 		}
 
@@ -58,5 +58,4 @@ func isPortOpen(host string, port int) bool {
 	}
 
 	return false
-	return true
 }
