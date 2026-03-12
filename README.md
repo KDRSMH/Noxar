@@ -52,6 +52,8 @@ go run ./cmd/gorecon
 noxar
 ```
 
+![NOXAR Menu](Menu.png)
+
 ### Menu Options
 
 ```
